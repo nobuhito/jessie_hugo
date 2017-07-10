@@ -21,8 +21,8 @@ ENV HUGO_TARBALL hugo_${HUGO_VERSION}_Linux-64bit.tar.gz
 ENV HUGO_BINARY hugo_${HUGO_VERSION}
 
 ADD https://github.com/spf13/hugo/releases/download/v${HUGO_VERSION}/${HUGO_TARBALL} /usr/local/
-RUN tar xzf /usr/local/${HUGO_TARBALL} -C /usr/local/${HUGO_BINARY} \
-        && ln -s /usr/local/${HUGO_BINARY}/hugo /usr/local/bin/hugo \
+RUN tar xzf /usr/local/${HUGO_TARBALL} -C /usr/local/ \
+        && ln -s /usr/local/hugo /usr/local/bin/hugo \
         && rm /usr/local/${HUGO_TARBALL}
 
 
