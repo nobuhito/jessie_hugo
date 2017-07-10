@@ -18,7 +18,7 @@ RUN rm -fr /var/lib/apt/lists/*
 # Download and install hugo
 ENV HUGO_VERSION 0.25.1
 ENV HUGO_TARBALL hugo_${HUGO_VERSION}_Linux-64bit.tar.gz
-ENV HUGO_BINARY hugo_${HUGO_VERSION}_linux_amd64
+ENV HUGO_BINARY hugo_${HUGO_VERSION}_Linuc-64bit
 
 ADD https://github.com/spf13/hugo/releases/download/v${HUGO_VERSION}/${HUGO_TARBALL} /usr/local/
 RUN tar xzf /usr/local/${HUGO_TARBALL} -C /usr/local/ \
